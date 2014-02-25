@@ -1,0 +1,56 @@
+@mixin radius($amount) {
+  	-moz-border-radius: $amount;
+  	-webkit-border-radius: $amount;
+  	border-radius: $amount;
+	}
+
+#users-new{
+	width:700px;
+	
+
+	background-color:#fff;
+	margin-left:auto;
+	margin-right:auto;
+
+	margin-top:100px;
+
+	@include radius(10px);
+
+	padding-top:20px;
+	padding-bottom:20px;
+	padding-left:50px;
+
+	#signup{
+		
+
+		.welcome{
+			margin-bottom:20px;
+		}
+		.join{
+			width:450px;
+		}
+		.signin{
+			line-height:20px;
+		}
+		.inputbox{
+			width:320px;
+		}
+		.msg{
+			color: rgb(128, 128, 128);
+			font-size:13px;
+			vertical-align:middle;
+		}
+		.right{
+			color:green;
+		}
+		.wrong{
+			color:red;
+		}
+		input.form-control{
+			width:300px;
+		}
+		input.btn{
+			width:300px;
+		}
+	}
+}

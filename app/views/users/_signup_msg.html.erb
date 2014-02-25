@@ -1,0 +1,9 @@
+<% if error.any? %>
+ 	<span class="wrong">
+  	<span class="glyphicon glyphicon-remove"></span> <%= error[0] %>
+  </span>
+<% else %>
+  <span class="right">
+    <span class="glyphicon glyphicon-ok"></span> <%= ok_msg %>
+  </span>
+<% end %>

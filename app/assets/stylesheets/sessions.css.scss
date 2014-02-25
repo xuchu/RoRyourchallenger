@@ -1,0 +1,31 @@
+// Place all the styles related to the Sessions controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@mixin radius($amount) {
+  	-moz-border-radius: $amount;
+  	-webkit-border-radius: $amount;
+  	border-radius: $amount;
+}
+#session-new{
+	width:400px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:200px;
+	background-color:#fff;
+
+	padding:0px 50px 20px 50px;
+	@include radius(10px);
+	#signin{
+		.welcome{
+			
+		}
+		input.form-control, input.btn{
+			width:300px;
+		}
+
+		input.btn{
+			margin-bottom:10px;
+		}
+	}
+}

@@ -1,0 +1,8 @@
+In contrast to the plural convention for controller names, model names are singular: a Users controller, but a User model.
+
+$ rails generate model User name:string email:string
+it creates a users table with two columns, name and email, 
+
+Here the table name is plural (users) even though the model name is singular (User), which reflects a linguistic convention followed by Rails: a model represents a single user, whereas a database table consists of many users.
+
+a Users controller, a User model, and a Users table in database

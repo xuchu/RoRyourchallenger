@@ -1,0 +1,5 @@
+@mixin radius($amount) {
+  	-moz-border-radius: $amount;
+  	-webkit-border-radius: $amount;
+  	border-radius: $amount;
+}

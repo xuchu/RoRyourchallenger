@@ -1,0 +1,81 @@
+// Place all the styles related to the main controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body{
+	background-image: url('home.jpg');
+	background-size: cover;
+}
+
+#home{
+	position:relative;
+	hidden:overflow;
+
+	.signin-form{
+		position:absolute;
+		right:160px;
+		top:20px;
+		a.btn{width:99px;}
+	}
+
+	.signup-form{
+		position:absolute;
+		right:30px;
+		top:20px;
+	}
+
+	.home-forms{
+		position:absolute;
+		right:20px;
+		top:250px;
+
+		.login-form{
+			padding:15px;
+			background-color: rgba(255,255,255,0.15);
+			.table-cell{vertical-align: top;}
+			.signin-btn{width:250px;}
+			.remember-forgot{font-size: 14px;}
+
+			.form-control{
+				margin-bottom:10px;
+			}
+
+			.remember{
+				display: inline;
+				input{vertical-align:baseline;}
+			}
+		}
+	}
+		
+
+	.home-foot{
+		position:absolute;
+		right:10px;
+		bottom:10px;
+
+		ul{
+			font-size:12px;
+			list-style-type:none;
+			text-align:center;
+
+			li{
+				display:inline-block;
+				text-align:center;
+				margin-left:3px;
+				margin-right:3px;
+				color:white;
+			}
+		}
+
+		a{ 
+			color:white;
+			text-decoration: none;
+			text-shadow: rgba(0, 0, 0, 0.2) 0px 1px 1px;
+			width: auto;
+		}
+		a:link    { color:white; }
+		a:visited { color:white; }
+		a:hover   { color:white; }
+		a:active  { color:white; }
+	}
+}
