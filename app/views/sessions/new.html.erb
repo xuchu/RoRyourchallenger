@@ -1,19 +1,19 @@
 <div id="session-new">
 	<div id="signin">
 		<div class="welcome">
-			<div class="table-cell joinin"><h3>Sign in to yourChallenger</h3></div>
+			<h3>Sign in to yourChallenger</h3>
 		</div>
       <%= form_tag({ controller: "sessions", action: "create"}, method: "post") do %>
   		<div class="form-group">
     		<label>Email address</label>
         <div class="table-cell inputbox">
-          <%= email_field :user,:email, :class=>'form-control'%>
+          <%= email_field :session,:email, :class=>'form-control'%>
         </div>
   		</div>
   		<div class="form-group">
     		<label>Password</label>
         <div class="table-cell inputbox">
-          <%= password_field :user,:password, :class=>'form-control' %>
+          <%= password_field :session,:password, :class=>'form-control' %>
         </div>
   		</div>
       <div class="checkbox">

@@ -1,15 +1,17 @@
 Yourchallenger::Application.routes.draw do
 
+  root to: 'main#home'
 
-  resources :users
+  resources :users, except: :show
   resources :sessions
-  get '/signup', to: 'users#new'
-  get '/signin', to: 'sessions#new'
-  get '/signout', to: 'sessions#destroy'
+  get '/signup', to: 'users#new', as: :signup
+  get '/signin', to: 'sessions#new', as: :login
+  delete '/signout', to: 'sessions#destroy', as: :logout
   
 
   #You can specify what Rails should route '/' to with the root method:
-  root to: 'main#home'
+  
+  get ':name', to: 'users#show', as: :user_name
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

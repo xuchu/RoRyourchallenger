@@ -7,5 +7,12 @@ class User < ActiveRecord::Base
 
 	has_secure_password
 	has_many :locations, dependent: :destroy
+	has_one :remember_token, dependent: :destroy
+
+	def to_param
+		name = self.name
+		name.gsub!(/ /, '.')     
+     "#{name}"
+  end
 
 end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140222163707) do
+ActiveRecord::Schema.define(version: 20140227141913) do
 
   create_table "cities", force: true do |t|
     t.string  "city_name", null: false
@@ -34,6 +34,13 @@ ActiveRecord::Schema.define(version: 20140222163707) do
     t.integer "code",    null: false
     t.integer "city_id", null: false
   end
+
+  create_table "remember_tokens", force: true do |t|
+    t.string  "remember_token", null: false
+    t.integer "user_id",        null: false
+  end
+
+  add_index "remember_tokens", ["remember_token"], name: "index_remember_tokens_on_remember_token", using: :btree
 
   create_table "states", force: true do |t|
     t.string  "state_name", null: false
