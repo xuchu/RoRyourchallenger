@@ -1,5 +1,9 @@
 class UsersController < ApplicationController
   skip_before_action :authorize, only: [:new, :create]
+
+  def index
+  end
+
   def new
   	@user = User.new
   end
@@ -15,11 +19,12 @@ class UsersController < ApplicationController
       render :new
     else
       @user.save
+      redirect_to "/"
     end
   end
 
   def show
-    @user = User.find_by(id: session[:user_id])
+    @user = current_user
   end
 
   private

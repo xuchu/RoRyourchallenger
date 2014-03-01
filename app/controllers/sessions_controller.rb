@@ -1,5 +1,6 @@
 class SessionsController < ApplicationController
-	skip_before_action :authorize
+	skip_before_action :authorize, only:[:new,:create,:destroy]
+
 	def new
 		render :new
 	end
@@ -7,8 +8,12 @@ class SessionsController < ApplicationController
 	def create
 		user = User.find_by(email: params[:session][:email].downcase)
   	if user && user.authenticate(params[:session][:password])
-  		session[:user_id] = user.id
-    	redirect_to user_name_path(user)
+  		if params[:session][:remember_me] == "checked"
+        signin user
+			elsif params[:session][:remember_me] == "unchecked"
+				session[:user_id] = user.id
+  		end
+  		redirect_to "/"
   	else
   		flash[:error] = 'Invalid email/password combination'
     	render "new"

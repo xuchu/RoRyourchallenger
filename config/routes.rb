@@ -1,6 +1,13 @@
+class AuthConstraint
+  def matches?(request)
+    request.session['user_id'].present? or request.cookies['remember_token'].present?
+  end
+end
+
 Yourchallenger::Application.routes.draw do
 
-  root to: 'main#home'
+  root to: 'users#index', constraints: AuthConstraint.new, as: nil
+  root to: 'main#home', as: nil
 
   resources :users, except: :show
   resources :sessions
