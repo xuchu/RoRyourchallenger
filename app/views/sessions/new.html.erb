@@ -19,11 +19,13 @@
           <%= password_field :session,:password, :class=>'form-control' %>
         </div>
   		</div>
+      <!--
       <div class="checkbox">
         <label>
           <%= check_box :session, :remember_me, { checked:true }, "checked", "unchecked" %> Remember me
         </label>
       </div>
+      -->
       <%= submit_tag "Sign In",:class=>"btn btn-primary" %>
       <% end %>
       New user? <a href="/signup">Sign up now</a>

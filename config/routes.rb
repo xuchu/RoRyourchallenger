@@ -1,6 +1,6 @@
 class AuthConstraint
   def matches?(request)
-    request.session['user_id'].present? or request.cookies['remember_token'].present?
+    request.cookies['remember_token'].present?
   end
 end
 
@@ -9,16 +9,14 @@ Yourchallenger::Application.routes.draw do
   root to: 'users#index', constraints: AuthConstraint.new, as: nil
   root to: 'main#home', as: nil
 
-  resources :users, except: :show
+  resources :users, except: [:show,:index]
   resources :sessions
   get '/signup', to: 'users#new', as: :signup
   get '/signin', to: 'sessions#new', as: :login
   delete '/signout', to: 'sessions#destroy', as: :logout
   
 
-  #You can specify what Rails should route '/' to with the root method:
-  
-  get ':name', to: 'users#show', as: :user_name
+  get ':name', to: 'users#show', as: :user_home
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

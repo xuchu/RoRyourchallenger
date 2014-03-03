@@ -4,7 +4,7 @@ require 'mysql2'
 
 begin
     con = Mysql2::Client.new(:host => "localhost", :username => "root", :password=>"frouds",
-        :database => "RoRyourchallenger", :socket => "/tmp/mysql.sock")
+        :database => "NewRoRyourchallenger", :socket => "/tmp/mysql.sock")
    
     state = {}
     text = File.open("states.csv", "r").read

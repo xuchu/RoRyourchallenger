@@ -11,7 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140301191244) do
+ActiveRecord::Schema.define(version: 20140303172922) do
+
+  create_table "accounts", force: true do |t|
+  end
 
   create_table "cities", force: true do |t|
     t.string  "city_name", null: false
@@ -42,14 +45,15 @@ ActiveRecord::Schema.define(version: 20140301191244) do
   end
 
   create_table "users", force: true do |t|
-    t.string   "name",            null: false
-    t.string   "password_digest", null: false
-    t.string   "email",           null: false
+    t.string   "name",                            null: false
+    t.string   "password_digest",                 null: false
+    t.string   "email",                           null: false
     t.string   "website"
     t.string   "bio"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "remember_token"
+    t.boolean  "actived",         default: false
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
