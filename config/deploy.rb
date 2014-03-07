@@ -26,7 +26,7 @@ set :stages, :production
 set :pty, true
 
 # Default value for :linked_files is []
-# set :linked_files, %w{config/database.yml}
+set :linked_files, %w{config/database.yml config/initializers/secret_token.rb}
 
 # Default value for linked_dirs is []
 # set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
@@ -36,18 +36,17 @@ set :pty, true
 
 # Default value for keep_releases is 5
 set :keep_releases, 5
-after "deploy:restart", "deploy:cleanup"
 
 
 namespace :deploy do
 
-  desc "Symlink shared config files"
-  task :symlink_config_files  do
-    on roles(:all), in: :sequence do
-      execute "ln -nfs #{ deploy_to }/shared/config/database.yml #{ release_path }/config/database.yml"
-      execute "ln -nfs #{ deploy_to }/shared/config/secret_token.rb #{ release_path }/config/initializers/secret_token.rb"
-    end
-  end
+  #desc "Symlink shared config files"
+  #task :symlink_config_files  do
+  #  on roles(:web)  do
+  #    execute "ln -nfs #{ deploy_to } shared/config/database.yml #{ release_path }/config/database.yml"
+  #    execute "ln -nfs #{ deploy_to } shared/config/secret_token.rb #{ release_path }/config/initializers/secret_token.rb"
+  #  end
+  #end
 
   desc 'Restart application'
   task :restart do
@@ -57,15 +56,15 @@ namespace :deploy do
     end
   end
 
-  after :publishing, :symlink_config_files
+  #after :publishing, :symlink_config_files
   after :publishing, :restart
 
   after :restart, :clear_cache do
-    on roles(:web), in: :groups, limit: 3, wait: 10 do
+    on roles(:web)  do
       # Here we can do anything such as:
-      # within release_path do
-      #   execute :rake, 'cache:clear'
-      # end
+      within release_path do
+         execute :rake, 'cache:clear'
+      end
     end
   end
 
