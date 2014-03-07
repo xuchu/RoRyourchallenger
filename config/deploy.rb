@@ -15,9 +15,7 @@ set :scm, :git
 
 set :user, "vnc"
 
-set :stages, ["staging", "production"]
-set :default_stage, "production"
-
+set :stages, :production
 # Default value for :format is :pretty
 # set :format, :pretty
 
@@ -38,13 +36,17 @@ set :pty, true
 
 # Default value for keep_releases is 5
 set :keep_releases, 5
+after "deploy:restart", "deploy:cleanup"
+
 
 namespace :deploy do
 
   desc "Symlink shared config files"
-  task :symlink_config_files do
-    run "ln -s #{ deploy_to }/shared/config/database.yml #{ current_path }/config/database.yml"
-    run "ln -s #{ deploy_to }/shared/config/secret_token.rb #{ current_path }/config/initializers/secret_token.rb"
+  task :symlink_config_files  do
+    on roles(:all), in: :sequence do
+      run "ln -nfs #{ deploy_to }/shared/config/database.yml #{ current_path }/config/database.yml"
+      run "ln -nfs #{ deploy_to }/shared/config/secret_token.rb #{ current_path }/config/initializers/secret_token.rb"
+    end
   end
 
   desc 'Restart application'
