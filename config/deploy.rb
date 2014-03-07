@@ -40,6 +40,7 @@ set :keep_releases, 5
 
 namespace :deploy do
 
+  # the :linked_files above can make it
   #desc "Symlink shared config files"
   #task :symlink_config_files  do
   #  on roles(:web)  do
@@ -50,9 +51,9 @@ namespace :deploy do
 
   desc 'Restart application'
   task :restart do
-    on roles(:app), in: :sequence, wait: 5 do
+    on roles(:app) do
       # Your restart mechanism here, for example:
-      execute "touch #{ File.join(current_path, 'tmp', 'restart.txt'}"
+      execute "#{try_sudo} touch #{ File.join(current_path, 'tmp', 'restart.txt')}"
     end
   end
 
