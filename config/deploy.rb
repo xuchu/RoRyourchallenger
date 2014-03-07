@@ -53,7 +53,8 @@ namespace :deploy do
   task :restart do
     on roles(:app) do
       # Your restart mechanism here, for example:
-      execute "#{try_sudo} touch #{ File.join(current_path, 'tmp', 'restart.txt')}"
+      execute "mkdir #{ File.join(current_path, 'tmp')}"
+      execute "touch #{ File.join(current_path, 'tmp', 'restart.txt')}"
     end
   end
 
