@@ -24,7 +24,7 @@ Yourchallenger::Application.configure do
 
   # Compress JavaScripts and CSS.
   config.assets.js_compressor = :uglifier
-  # config.assets.css_compressor = :sass
+ config.assets.css_compressor = :sass
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
   config.assets.compile = false
@@ -40,7 +40,7 @@ Yourchallenger::Application.configure do
   # config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect' # for nginx
 
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
-  config.force_ssl = true
+  config.force_ssl = false
 
   # Set to :debug to see everything in the log.
   config.log_level = :info
@@ -77,14 +77,4 @@ Yourchallenger::Application.configure do
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
-
-  config.middleware.delete 'Rack::Cache'
-  config.middleware.delete 'Rack::Lock'
-  config.middleware.delete 'Rack::Runtime'
-  config.middleware.delete 'ActionDispatch::RequestId'
-  config.middleware.delete 'ActionDispatch::RemoteIp'
-  config.middleware.delete 'ActionDispatch::Callbacks'
-  config.middleware.delete 'ActionDispatch::Head'
-  config.middleware.delete 'Rack::ConditionalGet'
-  config.middleware.delete 'Rack::ETag'
 end

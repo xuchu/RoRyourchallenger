@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 body{
-	background-image: url('home.jpg');
+	background-image: asset-url("home.jpg");
 	background-size: cover;
 }
 

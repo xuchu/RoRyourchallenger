@@ -41,6 +41,12 @@ set :keep_releases, 5
 
 namespace :deploy do
 
+  desc "Symlink shared config files"
+  task :symlink_config_files do
+    run "#{ try_sudo } ln -s #{ deploy_to }/shared/config/database.yml #{ current_path }/config/database.yml"
+    run "#{ try_sudo } ln -s #{ deploy_to }/shared/config/secret_token.rb #{ current_path }/config/initializers/secret_token.rb"
+  end
+  
   desc 'Restart application'
   task :restart do
     on roles(:app), in: :sequence, wait: 5 do
