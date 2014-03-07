@@ -44,8 +44,8 @@ namespace :deploy do
   desc "Symlink shared config files"
   task :symlink_config_files  do
     on roles(:all), in: :sequence do
-      run "ln -nfs #{ deploy_to }/shared/config/database.yml #{ current_path }/config/database.yml"
-      run "ln -nfs #{ deploy_to }/shared/config/secret_token.rb #{ current_path }/config/initializers/secret_token.rb"
+      execute "ln -nfs #{ deploy_to }/shared/config/database.yml #{ release_path }/config/database.yml"
+      execute "ln -nfs #{ deploy_to }/shared/config/secret_token.rb #{ release_path }/config/initializers/secret_token.rb"
     end
   end
 
@@ -53,10 +53,11 @@ namespace :deploy do
   task :restart do
     on roles(:app), in: :sequence, wait: 5 do
       # Your restart mechanism here, for example:
-      # execute :touch, release_path.join('tmp/restart.txt')
+      execute :touch, release_path.join('tmp/restart.txt')
     end
   end
 
+  after :publishing, :symlink_config_files
   after :publishing, :restart
 
   after :restart, :clear_cache do
