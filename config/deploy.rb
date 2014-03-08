@@ -51,10 +51,10 @@ namespace :deploy do
 
   desc 'Restart application'
   task :restart do
-    on roles(:app) do
+    on roles(:web) do
       # Your restart mechanism here, for example:
       #execute "touch #{ File.join(current_path, 'tmp', 'restart.txt')}"
-      execute "/etc/init.d/nginx restart"
+      execute "#{sudo} /etc/init.d/nginx restart"
     end
   end
 
