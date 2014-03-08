@@ -53,8 +53,8 @@ namespace :deploy do
   task :restart do
     on roles(:app) do
       # Your restart mechanism here, for example:
-      execute "mkdir #{ File.join(current_path, 'tmp')}"
-      execute "touch #{ File.join(current_path, 'tmp', 'restart.txt')}"
+      #execute "touch #{ File.join(current_path, 'tmp', 'restart.txt')}"
+      execute "/etc/init.d/nginx restart"
     end
   end
 
