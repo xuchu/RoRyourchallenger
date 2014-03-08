@@ -52,8 +52,9 @@ namespace :deploy do
   desc 'Restart application'
   task :restart do
     on roles(:web) do
+      #don't know how to make it work
       # Your restart mechanism here, for example:
-      execute "#{sudo} touch #{File.join(release_path, 'tmp', 'restart.txt')}"
+      #execute "#{sudo} touch #{File.join(release_path, 'tmp', 'restart.txt')}"
       #execute "#{sudo} /etc/init.d/nginx restart"
     end
   end
