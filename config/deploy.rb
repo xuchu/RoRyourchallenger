@@ -65,9 +65,9 @@ namespace :deploy do
   after :restart, :clear_cache do
     on roles(:web)  do
       # Here we can do anything such as:
-      within release_path do
-         execute :rake, 'cache:clear'
-      end
+      #within release_path do
+      #   execute :rake, 'cache:clear'
+      #end
     end
   end
 
