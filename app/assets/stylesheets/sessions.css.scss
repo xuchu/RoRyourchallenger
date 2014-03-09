@@ -2,22 +2,17 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-@mixin radius($amount) {
-  	-moz-border-radius: $amount;
-  	-webkit-border-radius: $amount;
-  	border-radius: $amount;
-}
 #session-new{
 	width:400px;
 	position: fixed;
-  top: 50%;
-  left: 50%;
-  margin-top:-159px;
-  margin-left:-200px;
+    top: 50%;
+    left: 50%;
+    margin-top:-159px;
+    margin-left:-200px;
 	background-color:#fff;
 
 	padding:0px 50px 20px 50px;
-	@include radius(10px);
+    border-radius:10px;
 	#signin{
 		.welcome{
 			

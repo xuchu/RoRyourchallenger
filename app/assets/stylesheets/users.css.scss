@@ -1,8 +1,3 @@
-@mixin radius($amount) {
-  	-moz-border-radius: $amount;
-  	-webkit-border-radius: $amount;
-  	border-radius: $amount;
-	}
 
 #users-index{
 	width:700px;
@@ -13,8 +8,7 @@
   margin-left:-350px;
 
 	background-color:#fff;
-
-	@include radius(10px);
+    border-radius:10px;
 
 	padding-top:20px;
 	padding-bottom:20px;
@@ -30,7 +24,7 @@
 
 	background-color:#fff;
 
-	@include radius(10px);
+    border-radius:10px;
 
 	padding-top:20px;
 	padding-bottom:20px;
@@ -47,7 +41,7 @@
 
 	background-color:#fff;
 
-	@include radius(10px);
+    border-radius:10px;
 
 	padding-top:20px;
 	padding-bottom:20px;
