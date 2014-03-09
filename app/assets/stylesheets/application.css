@@ -12,12 +12,3 @@
  *= require_tree .
  */
 
- body{
-	background-image: url('bk.png');
-	background-size: cover;
-  font-family: 'Helvetica Neue', Helvetica, Arial, 'lucida grande', tahoma, verdana, arial, sans-serif;
-}
-.table-cell{
-	display: table-cell;
-}
-
