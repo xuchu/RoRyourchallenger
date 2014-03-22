@@ -1,4 +1,1 @@
-IN MYSQL
-
-:string |                   VARCHAR                | :limit => 1 to 255 (default = 255)  
-:text   | TINYTEXT, TEXT, MEDIUMTEXT, or LONGTEXT2 | :limit => 1 to 4294967296 (default = 65536)2
+yourchallenger.com is a social network for tennis amateur. It's previous veriosn is built on PHPfox.

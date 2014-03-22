@@ -2,7 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 body{
-  background-image: url(<%= asset_path 'home.jpg' %>);
+  background-image: asset-url('home.jpg', image);
+  background-repeat:no-repeat;
   background-size: cover;
   font-family: 'Helvetica Neue', Helvetica, Arial, 'lucida grande', tahoma, verdana, arial, sans-serif;
 }

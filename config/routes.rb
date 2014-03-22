@@ -1,6 +1,6 @@
 class AuthConstraint
   def matches?(request)
-    request.cookies['remember_token'].present?
+    request.cookies['remember_me'].present? || request.session['remember_me'].present?
   end
 end
 
