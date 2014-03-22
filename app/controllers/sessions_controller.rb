@@ -28,7 +28,8 @@ class SessionsController < ApplicationController
 
 	def destroy
 		current_user.update_attribute(:remember_token, User.encrypt(User.new_remember_token))
-    cookies.delete(:remember_token)
+    cookies.delete(:remember_me)
+    session.delete(:remember_me)
     self.current_user = nil
 		redirect_to login_url
 	end

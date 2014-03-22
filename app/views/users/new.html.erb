@@ -53,7 +53,7 @@
         </div>
         <div class="table-cell msg" id="password-msg">
           <% if @user.password.blank? %>
-              confirm your password.
+              Confirm your password.
           <% else %>
             <%= render partial: "signup_msg", locals: {error: @user.errors[:password_confirmation], ok_msg: "password matches."} %>
           <% end %>
