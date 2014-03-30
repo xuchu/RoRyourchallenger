@@ -2,6 +2,10 @@ class User < ActiveRecord::Base
 	before_save { self.email = email.downcase }
 	before_create :create_remember_token
 
+  #:username is the name used in the website, start with @, like @xuchu
+  #:name is the true name, like Xuchu Zhang
+  validate :username, uniqueness: true
+
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
 	validates :name, presence: { message: "The Name cannot be empty"},length: { maximum: 50, message: "The Name cannot be empty"}
 	validates :email, presence: { message: "The Email cannot be empty"}, format: { with: VALID_EMAIL_REGEX }, uniqueness: { case_sensitive: false, message: "The email has already been registered."} 
