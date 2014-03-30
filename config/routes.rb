@@ -9,14 +9,22 @@ Yourchallenger::Application.routes.draw do
   root to: 'users#index', constraints: AuthConstraint.new, as: nil
   root to: 'main#home', as: nil
 
-  resources :users, except: [:show,:index]
-  resources :sessions
+  resources :users, only: [:create, :update]
+  resources :sessions, only: [:create]
   get '/signup', to: 'users#new', as: :signup
   get '/signin', to: 'sessions#new', as: :login
   delete '/signout', to: 'sessions#destroy', as: :logout
-  
 
   get ':name', to: 'users#show', as: :user_home
+
+  namespace :settings do
+    resources :accounts, only: [:create, :update]
+    get 'account', to: 'accounts#new', as: :settings_account
+  end
+  #get '/settings/account', to: 'accounts#new'
+  #namespace :setting do
+  #  resources :accounts, only: [:new, :create, :update]
+  #end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
