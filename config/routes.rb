@@ -21,10 +21,6 @@ Yourchallenger::Application.routes.draw do
     resources :accounts, only: [:create, :update]
     get 'account', to: 'accounts#new', as: :settings_account
   end
-  #get '/settings/account', to: 'accounts#new'
-  #namespace :setting do
-  #  resources :accounts, only: [:new, :create, :update]
-  #end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -51,7 +51,7 @@
         <div class="table-cell inputbox">
           <%= password_field :user,:password_confirmation, :class=>'form-control', :value=> @user.password_confirmation %>
         </div>
-        <div class="table-cell msg" id="password-msg">
+        <div class="table-cell msg" id="password-confirm-msg">
           <% if @user.password.blank? %>
               Confirm your password.
           <% else %>

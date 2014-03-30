@@ -38,12 +38,10 @@ gem 'bcrypt-ruby', '~> 3.1.2'
 # Use unicorn as the app server
 #gem 'unicorn', group: :production
 
-# Use Capistrano for deployment
-gem 'capistrano', group: :development
-
 group :development do
-  gem "better_errors"
-  gem "binding_of_caller"
+  gem 'capistrano'
+  gem 'better_errors'
+  gem 'binding_of_caller'
 end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
