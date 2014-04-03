@@ -1,5 +1,5 @@
 .users-index{
-  width:500px;
+  width:600px;
   padding-top: 100px;
     .cell{
       display: table-cell;
@@ -8,11 +8,11 @@
       padding: 10px;
       padding-left: 20px;
       border-radius:8px;
-      background-color: rgba(255,255,255,1);
+      background-color: rgba(255,255,255,0.2);
       color:#000;
 
       .activity{
-        background-color: rgba(255,255,255,1);
+
       }
       span.username{
         display: inline-block;
