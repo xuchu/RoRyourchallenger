@@ -1,6 +1,6 @@
 module SessionsHelper
 
-	def signin(user, duration)
+	def signin(user, duration = :permanent)
     if duration == :temporary
       session[:remember_me] = user.id
     end

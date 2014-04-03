@@ -17,11 +17,7 @@ class SessionsController < ApplicationController
 		user = User.find_by_email( params[:session][:email].downcase )
   	if user && user.authenticate( params[:session][:password] )
 
-      if params[:session][:remember_me] == "checked"
-        signin user, :temporary
-      else
-        signin user, :permanent
-      end
+      signin user
 
   		redirect_to "/"
   	else
