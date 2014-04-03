@@ -1,16 +1,27 @@
 // Place all the styles related to the Sessions controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import url(http://fonts.googleapis.com/css?family=Sonsie+One);
+
+$form-width: 260px;
 
 #session-new{
-  width:260px;
+  width:$form-width;
   position: fixed;
   top: 50%;
   left: 50%;
-  margin-top:-100px;
-  margin-left:-130px;
+  margin-top:-150px;
+  margin-left: - ($form-width / 2);
 
 	#signin{
+      h3{
+        font-family: 'Sonsie One', cursive;
+        font-weight: normal;
+        color:white;
+        font-size: 24px;
+        display:block;
+        margin-bottom: 20px;
+      }
       .form{
         background: white;
         border-radius: 2px;
@@ -23,7 +34,6 @@
         width: 100%;
         padding: 11px 10px 11px 13px;
         display: block;
-        margin-bottom: 10px;
         margin:0;
         border: 0;
         background: 0;
