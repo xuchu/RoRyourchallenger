@@ -1,31 +1,15 @@
 <div id="session-new">
 	<div id="signin">
-		<div class="welcome">
-			<h3>Sign in to yourChallenger</h3>
-		</div>
-      <% if flash[:error] %>
-        <div class="notice"><%= flash[:error] %></div>
-      <% end %>
       <%= form_tag({ controller: "sessions", action: "create"}, method: "post") do %>
-  		<div class="form-group">
-    		<label>Email address</label>
-        <div class="table-cell inputbox">
-          <%= email_field :session,:email, :class=>'form-control'%>
+  		<div class="form">
+            <div class="form-row">
+                <%= email_field :session,:email, :placeholder => "Email" %>
+            </div>
+  		    <div class="form-row">
+                <%= password_field :session,:password, :placeholder => "Password" %>
+  		    </div>
         </div>
-  		</div>
-  		<div class="form-group">
-    		<label>Password</label>
-        <div class="table-cell inputbox">
-          <%= password_field :session,:password, :class=>'form-control' %>
-        </div>
-  		</div>
-      <div class="checkbox">
-        <label>
-          <%= check_box :session, :remember_me, { checked:true }, "checked", "unchecked" %> Remember me
-        </label>
-      </div>
-      <%= submit_tag "Sign In",:class=>"btn btn-primary" %>
+        <%= submit_tag "Log In",:class=>"sign-button" %>
       <% end %>
-      New user? <a href="/signup">Sign up now</a>
 	</div>
 <div>
