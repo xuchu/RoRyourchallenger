@@ -1,6 +1,7 @@
 class AuthConstraint
   def matches?(request)
     request.cookies['remember_me'].present?
+  end
 end
 
 Yourchallenger::Application.routes.draw do
