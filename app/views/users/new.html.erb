@@ -1,66 +1,19 @@
 <div id="users-new">
-	<div id="signup">
-		<div class="welcome">
-			<div class="table-cell join"><h3>Join yourChallenger today.</h3></div>
-			<div class="table-cell">
-        <span class="signin">Have an account? <a href="/signin">Sign in</a></span>
-      </div>
-		</div>
-      <%= form_tag({ controller: "users", action: "create"}, method: "post") do %>
-			<div class="form-group">
-    		<label>Full name</label>
-        <div class="table-cell inputbox">
-          <%= text_field :user,:name, :class=>'form-control', :value=> @user.name %>
-        </div>
-        <div class="table-cell msg" id="name-msg">
-          <% if @user.name.blank? %>
-            Enter your first and last name.
-          <% else %>
-            <%= render partial: "signup_msg", locals: {error: @user.errors[:name], ok_msg: "Name looks great."} %>
-          <% end %>
-        </div>
-  		</div>
-  		<div class="form-group">
-    		<label>Email address</label>
-        <div class="table-cell inputbox">
-          <%= email_field :user,:email, :class=>'form-control', :value=> @user.email %>
-        </div>
-        <div class="table-cell msg" id="email-msg">
-          <% if @user.email.blank? %>
-              What’s your email address?
-          <% else %>
-            <%= render partial: "signup_msg", locals: {error: @user.errors[:email], ok_msg: "We will email you a confirmation."} %>
-          <% end %>
-        </div>
-  		</div>
-  		<div class="form-group">
-    		<label>Password</label>
-        <div class="table-cell inputbox">
-          <%= password_field :user,:password, :class=>'form-control', :value=> @user.password %>
-        </div>
-        <div class="table-cell msg" id="password-msg">
-          <% if @user.password.blank? %>
-              6 characters or more! Be tricky.
-          <% else %>
-            <%= render partial: "signup_msg", locals: {error: @user.errors[:password], ok_msg: "Password is okay"} %>
-          <% end %>
-        </div>
-  		</div>
-      <div class="form-group">
-        <label>Password Confirmation</label>
-        <div class="table-cell inputbox">
-          <%= password_field :user,:password_confirmation, :class=>'form-control', :value=> @user.password_confirmation %>
-        </div>
-        <div class="table-cell msg" id="password-confirm-msg">
-          <% if @user.password.blank? %>
-              Confirm your password.
-          <% else %>
-            <%= render partial: "signup_msg", locals: {error: @user.errors[:password_confirmation], ok_msg: "password matches."} %>
-          <% end %>
-        </div>
-      </div>
-      <%= submit_tag "Create my account",:class=>"btn btn-primary" %>
-      <% end %>
-		</form>
-	</div>
+  <div id="signup" class="sign">
+    <h3>yourChallenger</h3>
+    <%= form_tag({ controller: "users", action: "create"}, method: "post") do %>
+        <div class="form">
+            <div class="form-row">
+              <%= email_field :user,:email, :placeholder => "Email", :value=> @user.email %>
+            </div>
+            <div class="form-row">
+              <%= password_field :user,:password, :placeholder => "Password", :value=> @user.password %>
+            </div>
+            <div class="form-row">
+              <%= password_field :user,:password_confirmation, :placeholder => "Password Confirmation", :value=> @user.password_confirmation %>
+            </div>
+         </div>
+        <%= submit_tag "Sign Up",:class=>"sign-button" %>
+     <% end %>
+  </div>
 <div>

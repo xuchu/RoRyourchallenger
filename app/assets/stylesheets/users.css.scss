@@ -1,3 +1,5 @@
+@import 'sign';
+
 .users-index{
   width:600px;
   padding-top: 100px;
@@ -82,52 +84,12 @@
 }
 
 #users-new{
-	width:700px;
-	position: fixed;
-    top: 50%;
-    left: 50%;
-    margin-top:-238px;
-    margin-left:-350px;
-
-	background-color:#fff;
-
-    border-radius:10px;
-
-	padding-top:20px;
-	padding-bottom:20px;
-	padding-left:50px;
-
-	#signup{
-		.welcome{
-			margin-bottom:20px;
-		}
-		.join{
-			width:450px;
-		}
-		.signin{
-			line-height:20px;
-		}
-		.inputbox{
-			width:320px;
-		}
-		.msg{
-			color: rgb(128, 128, 128);
-			font-size:13px;
-			vertical-align:middle;
-		}
-		.right{
-			color:green;
-		}
-		.wrong{
-			color:red;
-		}
-		input.form-control{
-			width:300px;
-		}
-		input.btn{
-			width:300px;
-		}
-	}
+  width:260px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top:-150px;
+  margin-left: -130px;
 }
 
 #navbar{
