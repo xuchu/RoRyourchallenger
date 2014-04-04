@@ -7,7 +7,6 @@ class User < ActiveRecord::Base
   validate :username, uniqueness: true
 
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
-	validates :name, presence: { message: "The Name cannot be empty"},length: { maximum: 50, message: "The Name cannot be empty"}
 	validates :email, presence: { message: "The Email cannot be empty"}, format: { with: VALID_EMAIL_REGEX }, uniqueness: { case_sensitive: false, message: "The email has already been registered."} 
 	validates :password, presence: { message: "The Password cannot be empty"}, length: { minimum: 6, message: "Password has at least six."}
 
@@ -17,7 +16,7 @@ class User < ActiveRecord::Base
 
 
 	def to_param
-		name = self.name
+		name = self.username
 		name.gsub!(/ /, '.')
   end
 

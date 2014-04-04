@@ -1,6 +1,6 @@
 class AuthConstraint
   def matches?(request)
-    request.cookies['remember_me'].present?
+    request.cookies['remember_token'].present?
   end
 end
 
@@ -10,12 +10,13 @@ Yourchallenger::Application.routes.draw do
   root to: 'main#home', as: nil
 
   resources :users, only: [:create, :update]
-  resources :sessions, only: [:create]
+  resources :sessions, only: [:create, :destroy]
   get '/signup', to: 'users#new', as: :signup
   get '/signin', to: 'sessions#new', as: :login
+
   delete '/signout', to: 'sessions#destroy', as: :logout
 
-  get ':name', to: 'users#show', as: :user_home
+  #get ':name', to: 'users#show', as: :user_home
 
   #product route like settings/account
   namespace :settings do
