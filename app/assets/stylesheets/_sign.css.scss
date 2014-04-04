@@ -51,3 +51,22 @@
     color: white;
   }
 }
+.left-bottom{
+  position: fixed;
+  left:2%;
+  bottom:2%;
+
+  .sign-there{
+    background: rgba(255,255,255,0.33);
+    height: 45px;
+    width:100px;
+    text-align: center;
+    margin-bottom: 10px;
+    a{
+      color:white;
+      text-decoration: none solid rgb(255, 255, 255);
+      font-size: 16px;
+      line-height: 45px;
+    }
+  }
+}
