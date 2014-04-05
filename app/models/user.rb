@@ -16,8 +16,7 @@ class User < ActiveRecord::Base
 
 
 	def to_param
-		name = self.username
-		name.gsub!(/ /, '.')
+		self.username
   end
 
   def self.new_remember_token
