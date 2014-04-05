@@ -1,0 +1,16 @@
+body{
+  font-family: 'Helvetica Neue', Helvetica, Arial, 'lucida grande', tahoma, verdana, arial, sans-serif;
+  font-size: 14px;
+}
+
+$smallScreen = 768px;
+
+@media all and (max-width: $smallScreen) {
+  body{ background-color: rgb(44,71,137);}
+}
+@media all and (min-width: $smallScreen+1){
+  body{
+    background: asset-url('lina.jpg', image) no-repeat center center fixed;
+    background-size: cover;
+  }
+}

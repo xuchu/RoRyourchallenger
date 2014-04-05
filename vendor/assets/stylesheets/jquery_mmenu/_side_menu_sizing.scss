@@ -1,0 +1,6 @@
+@media (max-width: 768px) {
+  @include sizing("",0.8,140px,440px,0.8,140px,880px);
+}
+@media (min-width: 769px) {
+  @include sizing("",0.2,140px,440px,0.8,140px,880px);
+}

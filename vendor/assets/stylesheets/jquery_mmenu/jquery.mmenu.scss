@@ -3,7 +3,6 @@
 */
 @import "inc/variables";
 
-
 //	Animations
 .mm-page,
 .mm-fixed-top,
@@ -354,3 +353,5 @@ html.mm-blocking
 
 @include colors;
 @include sizing;
+
+@import 'side_menu_sizing';
