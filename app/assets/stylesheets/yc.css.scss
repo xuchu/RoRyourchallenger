@@ -1,16 +1,39 @@
+@import "variables";
+@import url(http://fonts.googleapis.com/css?family=Ribeye+Marrow);
+
 body{
   font-family: 'Helvetica Neue', Helvetica, Arial, 'lucida grande', tahoma, verdana, arial, sans-serif;
   font-size: 14px;
 }
 
-$smallScreen = 768px;
-
 @media all and (max-width: $smallScreen) {
+  a#logo{display: none;}
   body{ background-color: rgb(44,71,137);}
 }
 @media all and (min-width: $smallScreen+1){
   body{
     background: asset-url('lina.jpg', image) no-repeat center center fixed;
     background-size: cover;
+  }
+
+  a#logo{
+    font-family: 'Ribeye Marrow', cursive;
+    display: block;
+    width: 60px;
+    height: 60px;
+    background: rgb(63,154,236);
+    border-radius:0 0 30px 30px;
+    text-align: center;
+    position: relative;
+    top:-10px;
+    left:5%;
+    color: #ffffff;
+    font-size: 40px;
+    text-decoration: none;
+
+    &:hover{
+      top:-5px;
+    }
+    transition: 0.2s linear;
   }
 }
