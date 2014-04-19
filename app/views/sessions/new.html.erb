@@ -1,13 +1,13 @@
 <div id="session-new">
 	<div id="signin" class="sign">
       <h3>yourChallenger</h3>
-      <%= form_tag({ controller: "sessions", action: "create"}, method: "post") do %>
+      <%= form_tag({ controller: "sessions", action: "create"}, method: "post", id: "session_form") do %>
   		<div class="form">
             <div class="form-row">
-                <%= email_field :session,:email, :placeholder => "Email" %>
+                <%= email_field :session,:email, :placeholder => "Email", :required => "true" %>
             </div>
   		    <div class="form-row">
-                <%= password_field :session,:password, :placeholder => "Password" %>
+                <%= password_field :session,:password, :placeholder => "Password", :required => "true" %>
   		    </div>
         </div>
         <%= submit_tag "Log In",:class=>"sign-button" %>
@@ -20,3 +20,4 @@
         </div>
     </div>
 <div>
+  
