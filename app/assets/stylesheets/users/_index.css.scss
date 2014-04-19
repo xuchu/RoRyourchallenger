@@ -1,0 +1,63 @@
+.users-index{
+  .cell{
+    display: table-cell;
+  }
+  .timeline{
+    padding: 10px;
+    border-radius:8px;
+    background-color: rgba(255,255,255,1);
+    color:#000;
+
+    .activity{
+
+    }
+    span.username{
+      display: inline-block;
+      font-size: 15px;
+      font-weight: bold;
+      color:#f00;
+      padding-left: 5px;
+    }
+    .avatar{
+      border-radius: 50%;
+      width:60px;
+      height:auto;
+    }
+    .leftcell{
+      display: table-cell;
+      position: relative;
+
+      .vertical-line{
+        position: absolute;
+        left: 30px;
+        top: 120px;
+        bottom: 0;
+        width: 2px;
+        background: rgba(183,183,183,1);
+      }
+
+      .leftpart{
+        height:120px;
+
+        .avatar{
+          margin-top: 10px;
+          margin-bottom: 10px;
+        }
+        span{
+          font-size: 13px;
+          line-height: 15px;
+          display: block;
+          text-align: center;
+          padding:0px;
+          margin:0px;
+        }
+      }
+    }
+    .rightcell{
+      padding-left: 10px;
+      .post_content{
+        padding: 20px;
+      }
+    }
+  }
+}
