@@ -1,37 +1,55 @@
 // Place all the behaviors and hooks related to the matching controller here.
 // All this logic will automatically be available in application.js.
-$(document).on('ready page:load'), function(){
-document.getElementById("session_form").onclick = function(event)
-{
-    
-  var emailInput = document.getElementById("session_email");
-  var passwordInput = document.getElementById("session_password");
-
-  if(event.toElement.type == "submit")
+ 
+ //Minimum Password Validation
+$(document).on(('ready page:load'), function(){
+  document.getElementById("session_form").onclick = function(event)
   {
-    if(emailInput.value == "")
+    if(event.toElement.type == "submit")
     {
-      //emailInput.placeholder =    "Email                                 *required";
-      if(emailInput.required == false || emailInput.required == null || typeof(emailInput.required) == "undefined")
+      var emailInput = document.getElementById("session_email");;
+      var passwordInput = document.getElementById("session_password");;
+      var minPassLength = 6
+
+      if(passwordInput.value.length < minPassLength)
       {
-        //event.preventDefault();
+        var isBlank = false;
+        if(passwordInput.value.length == 0)
+        {
+          isBlank = true;
+        }
+        
+        passwordInput.value = "";
+        var elements = document.getElementsByTagName("INPUT");
+          for (var i = 0; i < elements.length; i++)
+          {
+              
+            if(elements[i].name != passwordInput.name)
+            {
+              continue;
+            }
+
+              elements[i].oninvalid = function(e)
+                {
+                    e.target.setCustomValidity("");
+                    if (!e.target.validity.valid)
+                    {
+                        if(isBlank)
+                        {
+                          e.target.setCustomValidity("Please fill out this field.");
+                        }
+                        else
+                        {
+                          e.target.setCustomValidity("Password must be at least "+minPassLength+" charactors long.");
+                        }
+                    }
+                };
+              elements[i].oninput = function(e)
+              {
+                  e.target.setCustomValidity("");
+              };
+          }
       }
     }
-
-    if(passwordInput.value.length < 6)
-    {
-      //passwordInput.placeholder =   "Password                          *required";
-      if(passwordInput.required == false || passwordInput.required == null || typeof(passwordInput.required) == "undefined")
-      {
-        //event.preventDefault();
-      }
-      event.preventDefault();
-    }
   }
-  else
-  {
-    //emailInput.placeholder = "Email";
-    //passwordInput.placeholder = "Password";
-  }
-}
 });
