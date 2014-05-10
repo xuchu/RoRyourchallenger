@@ -1,15 +1,22 @@
 @import "variables";
+@import "mobile";
 @import url(http://fonts.googleapis.com/css?family=Ribeye+Marrow);
 
 body{
   font-family: 'Helvetica Neue', Helvetica, Arial, 'lucida grande', tahoma, verdana, arial, sans-serif;
   font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -ms-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  font-smoothing: antialiased;
 }
 
-@media all and (max-width: $smallScreen) {
-  a#logo{display: none;}
-  body{ background-color: rgb(44,71,137);}
-}
+a:link {text-decoration:none;}
+a:visited {text-decoration:none;}
+a:hover {text-decoration:none;}
+a:active {text-decoration:none;}
+
 @media all and (min-width: $smallScreen+1){
   body{
     background: asset-url('lina.jpg', image) no-repeat center center fixed;
@@ -17,14 +24,14 @@ body{
   }
 
   a#logo{
-    font-family: 'Ribeye Marrow', cursive;
     display: block;
     width: 60px;
     height: 60px;
-    background: rgb(63,154,236);
+    font-family: 'Ribeye Marrow', cursive;
+    background-color: rgb(63,154,236);
     border-radius:0 0 30px 30px;
     text-align: center;
-    position: relative;
+    position: fixed;
     top:-10px;
     left:5%;
     color: #ffffff;
@@ -35,5 +42,65 @@ body{
       top:-5px;
     }
     transition: 0.2s linear;
+  }
+}
+.cell{
+  display: table-cell;
+}
+.table-cell{
+  display: table-cell;
+}
+.avatar{
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+.hidden{
+  display: none;
+}
+
+.yc-ui{
+  max-width: 970px;
+  margin-top: 80px;
+  .row-left{
+    .user-profile{
+      border-radius:8px 8px 0px 0px;
+      padding: 20px;
+      background: asset-url('user-profile-bk.jpg', image);
+      background-size: cover;
+      text-align: center;
+      color:#fff;
+      span.realname{
+        display: block;
+        font-size: 20px;
+        font-weight: bold;
+      }
+      span.username{
+        display: block;
+        font-size: 16px;
+        font-weight: bold;
+      }
+      .avatar{
+        width: 80px;
+        height: auto;
+        border-radius: 50%;
+      }
+    }
+
+  }
+  .row-right{
+    font-size: 1.4rem;
+    color:#000;
+    background-color: transparent;
+    .content-heading{
+      border-radius:8px 8px 0px 0px;
+      background-color: rgba(255,255,255,1);
+      padding: 10px 10px 0px 10px;
+      border-bottom: 1px solid rgb(225, 232, 237);
+      h3{
+        color: rgb(102, 117, 127);
+        margin-top: 0px;
+      }
+    }
   }
 }

@@ -1,24 +1,39 @@
-<div class="container users-index">
-  <dic class="row">
-    <div class="col-md-5"></div>
-    <div class="col-md-7">
-      <div class="timeline">
-        <h3>Activity</h3>
-        <div class="activity">
+<div class="fixed-top-bar">
+</div>
+<div class="container" id="users-index">
+  <div class="row">
+    <div class="col-md-4 row-left">
+      <%= render partial: "settings/accounts/user_profile" %>
+      <div id="dashboard">
+        <ul>
+          <li><a href="/settings/account"><span class="glyphicon glyphicon-picture"></span></a></li>
+          <li><a href="/settings/account"><span class="glyphicon glyphicon-envelope"></span></a></li>
+          <li><a href="/settings/account"><span class="glyphicon glyphicon-cog"></span></a></li>
+          <li><a href="/signout" data-method="delete" rel="nofollow"><span class="glyphicon glyphicon-off"></span></a></li>
+        </ul>
+      </div>
+      <div class="dashboard">
+      </div>
+    </div>
+    <div class="col-md-8 right-row">
+      <div id="timeline">
+        <div class="content-heading">
+          <h3>Activity</h3>
+        </div>
+        <div id="activity">
           <div class="post">
             <div class="cell leftcell">
               <div class="leftpart">
-                <%= image_tag("kevin.jpg", class: "avatar") %>
+                <%= image_tag(current_user.avatar.url(:thumb), class: "avatar") %>
                 <span>2</span>
                 <span>hours ago</span>
               </div>
-              <div class="vertical-line"></div>
             </div>
             <div class="cell rightcell">
-              <span class="username">KevinS</span> followed
+              <span class="realname"><%= current_user.name %></span>
               <div class="post_content">
-                <div>
-                  <%= image_tag("xu.jpg", class: "avatar") %> <span class="username">XuZ</span>
+                <div class="text">
+                  The Montana men’s tennis team will aim for two more Big Sky wins this weekend and lock up a first-round conference tournament bye.
                 </div>
               </div>
             </div>
@@ -26,17 +41,24 @@
           <div class="post">
             <div class="cell leftcell">
               <div class="leftpart">
-                <%= image_tag("kevin.jpg", class: "avatar") %>
+                <%= image_tag(current_user.avatar.url(:thumb), class: "avatar") %>
                 <span>2</span>
                 <span>hours ago</span>
               </div>
               <div class="vertical-line"></div>
             </div>
             <div class="cell rightcell">
-              <span class="username">KevinS</span> added 5 photos
+              <span class="realname"><%= current_user.name %></span> <span class="action">posted 5 photos</span>
               <div class="post_content">
-                <div>
-                  <%= image_tag("xu.jpg", class: "avatar") %>
+                <div class="text">
+                  I love these pictures!
+                </div>
+                <div class="imgs">
+                  <%= image_tag("t1.jpg", class: "img") %>
+                  <%= image_tag("t2.jpg", class: "img") %>
+                  <%= image_tag("t3.jpg", class: "img") %>
+                  <%= image_tag("t4.jpg", class: "img") %>
+                  <%= image_tag("t5.jpg", class: "img") %>
                 </div>
               </div>
             </div>
@@ -44,5 +66,5 @@
         </div>
       </div>
     </div>
-  </dic>
+    </div>
 </div>

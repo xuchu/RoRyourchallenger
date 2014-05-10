@@ -26,4 +26,7 @@ Yourchallenger::Application.configure do
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
   config.assets.debug = true
+
+  #tell Paperclip where to look for ImageMagick, run which convert to find the location( convert is one of the ImageMagick utilities)
+  Paperclip.options[:command_path] = "/usr/local/bin/"
 end

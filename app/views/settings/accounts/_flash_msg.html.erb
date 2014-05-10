@@ -1,0 +1,11 @@
+<% if flash[:success] %>
+    <div class="warning"> <%= flash[:success] %> <span class="flash-msg-remove">x</span></div>
+<% end %>
+
+<% if flash[:info] %>
+    <div class="warning"> <%= flash[:info] %> <span class="flash-msg-remove">x</span></div>
+<% end %>
+
+<% if flash[:warning] %>
+    <div class="warning"> <%= flash[:warning] %>  <span class="flash-msg-remove">x</span></div>
+<% end %>

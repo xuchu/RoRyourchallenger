@@ -1,0 +1,114 @@
+#setting{
+  .user-profile{
+    border-radius: 8px;
+  }
+  .setting-list{
+    margin-top: 20px;
+      a{
+        background-color: #fff;
+        display: block;
+        padding: 5px 12px 5px 20px;
+        border-bottom-color: rgb(225, 232, 237);
+        border-bottom-style: solid;
+        border-bottom-width: 1px;
+        color:#666666;
+        font-size: 14px;
+        font-weight: bold;
+
+
+        &:hover{
+          color:rgb(66, 139, 202)
+        }
+        &.selected{
+          color: #000;
+        }
+        &:first-child{
+          border-radius: 8px 8px 0px 0px;
+        }
+        &:last-child{
+          border-bottom-width: 0px;
+          border-radius: 0px 0px 8px 8px;
+        }
+      }
+  }
+  .setting-content{
+    background-color: #fff;
+    border-radius: 0px 0px 8px 8px;
+
+    .yc-modal{
+      .modal-header{
+        padding: 10px;
+      }
+      .modal-footer{
+        padding: 10px;
+      }
+      .modal-title{
+        text-align: center;
+      }
+    }
+    form{
+      padding: 20px;
+
+      .warning{
+        padding:10px 10px 10px 15px;
+        background-color: rgb(234,215,215);
+        color: #B00100;
+        font-size: 14px;
+      }
+      .info{
+        padding:10px 10px 10px 15px;
+        background-color: rgb(250,231,175);
+        color: #000000;
+        font-size: 14px;
+        font-weight: bold;
+      }
+      .success{
+        padding:10px 10px 10px 15px;
+        background-color: rgb(220,234,208);
+        color: #000000;
+        font-size: 14px;
+      }
+      .flash-msg-remove{
+        display: inline-block;
+        float:right;
+        padding-right: 10px;
+        cursor: pointer;
+      }
+      .form-group{
+        margin-top: 20px;
+
+        &:first-child{
+          margin-top: 10px;
+        }
+      }
+
+      div.form-info{
+        margin-top: 5px;
+      }
+      span.info{
+        color: rgb(51, 51, 51);
+        font-size: 12px;
+      }
+
+      label{
+        font-weight: bold;
+        font-size: 13px;
+        color: rgb(51, 51, 51);
+      }
+      div.cell:last-child{
+          padding-left: 10px;
+      }
+      a{
+        font-size: 12px;
+        font-weight: bold;
+        cursor: pointer;
+        text-decoration: underline;
+      }
+
+      #img_avatar{
+        width:100px;
+        height:100px;
+      }
+    }
+  }
+}

@@ -16,12 +16,17 @@ Yourchallenger::Application.routes.draw do
 
   delete '/signout', to: 'sessions#destroy', as: :logout
 
-  #get ':name', to: 'users#show', as: :user_home
+  get ':username', to: 'users#show', as: :user_home
 
   #product route like settings/account
   namespace :settings do
-    resources :accounts, only: [:create, :update]
-    get 'account', to: 'accounts#new', as: :settings_account
+    get 'account', to: 'accounts#account'
+    get 'password', to: 'accounts#password'
+    get 'profile', to: 'accounts#profile'
+
+    post 'update_account', to: 'accounts#update_account'
+    post 'update_password', to: 'accounts#update_password'
+    post 'update_profile', to: 'accounts#update_profile'
   end
 
 end

@@ -1,0 +1,199 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '-g',
+1 verbose cli   'express-generator' ]
+2 info using npm@1.2.2
+3 info using node@v0.8.18
+4 verbose read json /usr/local/lib/package.json
+5 verbose read json /usr/local/lib/package.json
+6 verbose cache add [ 'express-generator', null ]
+7 verbose cache add name=undefined spec="express-generator" args=["express-generator",null]
+8 verbose parsed url { pathname: 'express-generator',
+8 verbose parsed url   path: 'express-generator',
+8 verbose parsed url   href: 'express-generator' }
+9 silly lockFile 198a68d8-express-generator express-generator
+10 verbose lock express-generator /Users/xuchuzhang/.npm/198a68d8-express-generator.lock
+11 silly lockFile 198a68d8-express-generator express-generator
+12 verbose addNamed [ 'express-generator', '' ]
+13 verbose addNamed [ null, '' ]
+14 silly lockFile bd41e3d3-express-generator express-generator@
+15 verbose lock express-generator@ /Users/xuchuzhang/.npm/bd41e3d3-express-generator.lock
+16 silly addNameRange { name: 'express-generator', range: '', hasData: false }
+17 verbose url raw express-generator
+18 verbose url resolving [ 'https://registry.npmjs.org/', './express-generator' ]
+19 verbose url resolved https://registry.npmjs.org/express-generator
+20 info trying registry request attempt 1 at 20:42:16
+21 http GET https://registry.npmjs.org/express-generator
+22 http 200 https://registry.npmjs.org/express-generator
+23 silly registry.get cb [ 200,
+23 silly registry.get   { date: 'Thu, 08 May 2014 01:42:16 GMT',
+23 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R14B04)',
+23 silly registry.get     etag: '"11M42X70VHD8TNHZRFF5E3D9W"',
+23 silly registry.get     'content-type': 'application/json',
+23 silly registry.get     via: '1.1 varnish',
+23 silly registry.get     'cache-control': 'max-age=1',
+23 silly registry.get     'content-length': '7279',
+23 silly registry.get     'accept-ranges': 'bytes',
+23 silly registry.get     age: '2193',
+23 silly registry.get     'x-served-by': 'cache-v37-ASH, cache-d45-DAL',
+23 silly registry.get     'x-cache': 'HIT, MISS',
+23 silly registry.get     'x-cache-hits': '1, 0',
+23 silly registry.get     'x-timer': 'S1399510809.783189297,VS0,VS19,VE26,VE2526551',
+23 silly registry.get     vary: 'Accept',
+23 silly registry.get     'keep-alive': 'timeout=10, max=50',
+23 silly registry.get     connection: 'Keep-Alive' } ]
+24 silly addNameRange number 2 { name: 'express-generator', range: '', hasData: true }
+25 silly addNameRange versions [ 'express-generator', [ '1.0.0', '3.0.0', '4.0.0' ] ]
+26 verbose addNamed [ 'express-generator', '4.0.0' ]
+27 verbose addNamed [ '4.0.0', '4.0.0' ]
+28 silly lockFile 90c7528a-express-generator-4-0-0 express-generator@4.0.0
+29 verbose lock express-generator@4.0.0 /Users/xuchuzhang/.npm/90c7528a-express-generator-4-0-0.lock
+30 silly lockFile 25977c2d-ator-express-generator-4-0-0-tgz https://registry.npmjs.org/express-generator/-/express-generator-4.0.0.tgz
+31 verbose lock https://registry.npmjs.org/express-generator/-/express-generator-4.0.0.tgz /Users/xuchuzhang/.npm/25977c2d-ator-express-generator-4-0-0-tgz.lock
+32 verbose addRemoteTarball [ 'https://registry.npmjs.org/express-generator/-/express-generator-4.0.0.tgz',
+32 verbose addRemoteTarball   '1b16275739e6bd8cf670f5babc87b65e01bc045b' ]
+33 info retry fetch attempt 1 at 20:42:16
+34 verbose fetch to= /var/folders/kw/mn0dcg_d3qjgm_gpbyyn628c0000gn/T/npm-3405/1399513336337-0.05236996873281896/tmp.tgz
+35 http GET https://registry.npmjs.org/express-generator/-/express-generator-4.0.0.tgz
+36 http 200 https://registry.npmjs.org/express-generator/-/express-generator-4.0.0.tgz
+37 silly shasum updated bytes 5162
+38 info shasum 1b16275739e6bd8cf670f5babc87b65e01bc045b
+38 info shasum /var/folders/kw/mn0dcg_d3qjgm_gpbyyn628c0000gn/T/npm-3405/1399513336337-0.05236996873281896/tmp.tgz
+39 verbose tar unpack /var/folders/kw/mn0dcg_d3qjgm_gpbyyn628c0000gn/T/npm-3405/1399513336337-0.05236996873281896/tmp.tgz
+40 silly lockFile 4fe5d575-6337-0-05236996873281896-package /var/folders/kw/mn0dcg_d3qjgm_gpbyyn628c0000gn/T/npm-3405/1399513336337-0.05236996873281896/package
+41 verbose lock /var/folders/kw/mn0dcg_d3qjgm_gpbyyn628c0000gn/T/npm-3405/1399513336337-0.05236996873281896/package /Users/xuchuzhang/.npm/4fe5d575-6337-0-05236996873281896-package.lock
+42 silly gunzTarPerm modes [ '755', '644' ]
+43 silly gunzTarPerm extractEntry package.json
+44 silly gunzTarPerm extractEntry .npmignore
+45 silly gunzTarPerm extractEntry README.md
+46 silly gunzTarPerm extractEntry LICENSE
+47 silly gunzTarPerm extractEntry bin/express
+48 silly gunzTarPerm extractEntry templates/css/style.css
+49 silly gunzTarPerm extractEntry templates/css/style.less
+50 silly gunzTarPerm extractEntry templates/css/style.scss
+51 silly gunzTarPerm extractEntry templates/css/style.styl
+52 silly gunzTarPerm extractEntry templates/ejs/error.ejs
+53 silly gunzTarPerm extractEntry templates/ejs/index.ejs
+54 silly gunzTarPerm extractEntry templates/hogan/error.hjs
+55 silly gunzTarPerm extractEntry templates/hogan/index.hjs
+56 silly gunzTarPerm extractEntry templates/jade/error.jade
+57 silly gunzTarPerm extractEntry templates/jade/index.jade
+58 silly gunzTarPerm extractEntry templates/jade/layout.jade
+59 silly gunzTarPerm extractEntry templates/js/app.js
+60 silly gunzTarPerm extractEntry templates/js/routes/index.js
+61 silly gunzTarPerm extractEntry templates/js/routes/users.js
+62 silly gunzTarPerm extractEntry templates/js/www
+63 verbose read json /var/folders/kw/mn0dcg_d3qjgm_gpbyyn628c0000gn/T/npm-3405/1399513336337-0.05236996873281896/package/package.json
+64 silly lockFile 4fe5d575-6337-0-05236996873281896-package /var/folders/kw/mn0dcg_d3qjgm_gpbyyn628c0000gn/T/npm-3405/1399513336337-0.05236996873281896/package
+65 verbose from cache /var/folders/kw/mn0dcg_d3qjgm_gpbyyn628c0000gn/T/npm-3405/1399513336337-0.05236996873281896/package/package.json
+66 verbose tar pack [ '/Users/xuchuzhang/.npm/express-generator/4.0.0/package.tgz',
+66 verbose tar pack   '/var/folders/kw/mn0dcg_d3qjgm_gpbyyn628c0000gn/T/npm-3405/1399513336337-0.05236996873281896/package' ]
+67 verbose tarball /Users/xuchuzhang/.npm/express-generator/4.0.0/package.tgz
+68 verbose folder /var/folders/kw/mn0dcg_d3qjgm_gpbyyn628c0000gn/T/npm-3405/1399513336337-0.05236996873281896/package
+69 silly lockFile c00fbbdd-ress-generator-4-0-0-package-tgz /Users/xuchuzhang/.npm/express-generator/4.0.0/package.tgz
+70 verbose lock /Users/xuchuzhang/.npm/express-generator/4.0.0/package.tgz /Users/xuchuzhang/.npm/c00fbbdd-ress-generator-4-0-0-package-tgz.lock
+71 silly lockFile c00fbbdd-ress-generator-4-0-0-package-tgz /Users/xuchuzhang/.npm/express-generator/4.0.0/package.tgz
+72 silly lockFile 7def5ce5--express-generator-4-0-0-package /Users/xuchuzhang/.npm/express-generator/4.0.0/package
+73 verbose lock /Users/xuchuzhang/.npm/express-generator/4.0.0/package /Users/xuchuzhang/.npm/7def5ce5--express-generator-4-0-0-package.lock
+74 silly lockFile 7def5ce5--express-generator-4-0-0-package /Users/xuchuzhang/.npm/express-generator/4.0.0/package
+75 verbose tar unpack /Users/xuchuzhang/.npm/express-generator/4.0.0/package.tgz
+76 silly lockFile 7def5ce5--express-generator-4-0-0-package /Users/xuchuzhang/.npm/express-generator/4.0.0/package
+77 verbose lock /Users/xuchuzhang/.npm/express-generator/4.0.0/package /Users/xuchuzhang/.npm/7def5ce5--express-generator-4-0-0-package.lock
+78 silly gunzTarPerm modes [ '755', '644' ]
+79 silly gunzTarPerm extractEntry package.json
+80 silly gunzTarPerm extractEntry .npmignore
+81 silly gunzTarPerm extractEntry README.md
+82 silly gunzTarPerm extractEntry LICENSE
+83 silly gunzTarPerm extractEntry bin/express
+84 silly gunzTarPerm extractEntry templates/css/style.css
+85 silly gunzTarPerm extractEntry templates/css/style.less
+86 silly gunzTarPerm extractEntry templates/css/style.scss
+87 silly gunzTarPerm extractEntry templates/css/style.styl
+88 silly gunzTarPerm extractEntry templates/ejs/error.ejs
+89 silly gunzTarPerm extractEntry templates/ejs/index.ejs
+90 silly gunzTarPerm extractEntry templates/hogan/error.hjs
+91 silly gunzTarPerm extractEntry templates/hogan/index.hjs
+92 silly gunzTarPerm extractEntry templates/jade/error.jade
+93 silly gunzTarPerm extractEntry templates/jade/index.jade
+94 silly gunzTarPerm extractEntry templates/jade/layout.jade
+95 silly gunzTarPerm extractEntry templates/js/app.js
+96 silly gunzTarPerm extractEntry templates/js/routes/index.js
+97 silly gunzTarPerm extractEntry templates/js/routes/users.js
+98 silly gunzTarPerm extractEntry templates/js/www
+99 verbose read json /Users/xuchuzhang/.npm/express-generator/4.0.0/package/package.json
+100 silly lockFile 7def5ce5--express-generator-4-0-0-package /Users/xuchuzhang/.npm/express-generator/4.0.0/package
+101 silly shasum updated bytes 5162
+102 info shasum 1b16275739e6bd8cf670f5babc87b65e01bc045b
+102 info shasum /Users/xuchuzhang/.npm/express-generator/4.0.0/package.tgz
+103 verbose from cache /Users/xuchuzhang/.npm/express-generator/4.0.0/package/package.json
+104 verbose chmod /Users/xuchuzhang/.npm/express-generator/4.0.0/package.tgz 644
+105 verbose chown /Users/xuchuzhang/.npm/express-generator/4.0.0/package.tgz [ 501, 20 ]
+106 silly lockFile 25977c2d-ator-express-generator-4-0-0-tgz https://registry.npmjs.org/express-generator/-/express-generator-4.0.0.tgz
+107 silly lockFile 90c7528a-express-generator-4-0-0 express-generator@4.0.0
+108 silly lockFile bd41e3d3-express-generator express-generator@
+109 silly resolved [ { name: 'express-generator',
+109 silly resolved     description: 'Express\' application generator',
+109 silly resolved     version: '4.0.0',
+109 silly resolved     author: { name: 'TJ Holowaychuk', email: 'tj@vision-media.ca' },
+109 silly resolved     contributors: [ [Object], [Object], [Object], [Object] ],
+109 silly resolved     dependencies: { commander: '1.3.2', mkdirp: '0.3.5' },
+109 silly resolved     keywords:
+109 silly resolved      [ 'express',
+109 silly resolved        'framework',
+109 silly resolved        'sinatra',
+109 silly resolved        'web',
+109 silly resolved        'rest',
+109 silly resolved        'restful',
+109 silly resolved        'router',
+109 silly resolved        'app',
+109 silly resolved        'api' ],
+109 silly resolved     repository: { type: 'git', url: 'git://github.com/expressjs/generator' },
+109 silly resolved     main: 'bin/express',
+109 silly resolved     bin: { express: './bin/express' },
+109 silly resolved     engines: { node: '>= 0.8.0' },
+109 silly resolved     readme: '[![express logo](http://f.cl.ly/items/0V2S1n0K1i3y1c122g04/Screen%20Shot%202012-04-11%20at%209.59.42%20AM.png)](http://expressjs.com/)\n\n  Fast, unopinionated, minimalist web framework for [node](http://nodejs.org).\n\n  [![Gittip](http://img.shields.io/gittip/visionmedia.png)](https://www.gittip.com/visionmedia/)\n\n## Quick Start\n\n The quickest way to get started with express is to utilize the executable `express(1)` to generate an application as shown below:\n\n Create the app:\n\n    $ npm install -g express-generator\n    $ express /tmp/foo && cd /tmp/foo\n\n Install dependencies:\n\n    $ npm install\n\n Rock and Roll\n\n    $ npm start\n\n## License\n\n(The MIT License)\n\nCopyright (c) 2009-2012 TJ Holowaychuk &lt;tj@vision-media.ca&gt;\n\nPermission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n\'Software\'), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:\n\nThe above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \'AS IS\', WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.\nIN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY\nCLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,\nTORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE\nSOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n',
+109 silly resolved     readmeFilename: 'README.md',
+109 silly resolved     _id: 'express-generator@4.0.0',
+109 silly resolved     dist: { shasum: '1b16275739e6bd8cf670f5babc87b65e01bc045b' },
+109 silly resolved     _from: 'express-generator@',
+109 silly resolved     _resolved: 'https://registry.npmjs.org/express-generator/-/express-generator-4.0.0.tgz' } ]
+110 info install express-generator@4.0.0 into /usr/local/lib
+111 info installOne express-generator@4.0.0
+112 verbose from cache /Users/xuchuzhang/.npm/express-generator/4.0.0/package/package.json
+113 info /usr/local/lib/node_modules/express-generator unbuild
+114 verbose read json /usr/local/lib/node_modules/express-generator/package.json
+115 verbose tar unpack /Users/xuchuzhang/.npm/express-generator/4.0.0/package.tgz
+116 silly lockFile d3cc1706-b-node-modules-express-generator /usr/local/lib/node_modules/express-generator
+117 verbose lock /usr/local/lib/node_modules/express-generator /Users/xuchuzhang/.npm/d3cc1706-b-node-modules-express-generator.lock
+118 silly gunzTarPerm modes [ '755', '644' ]
+119 error Error: EACCES, mkdir '/usr/local/lib/node_modules/express-generator'
+119 error  { [Error: EACCES, mkdir '/usr/local/lib/node_modules/express-generator']
+119 error   errno: 3,
+119 error   code: 'EACCES',
+119 error   path: '/usr/local/lib/node_modules/express-generator',
+119 error   fstream_type: 'Directory',
+119 error   fstream_path: '/usr/local/lib/node_modules/express-generator',
+119 error   fstream_class: 'DirWriter',
+119 error   fstream_stack:
+119 error    [ 'DirWriter._create (/usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23)',
+119 error      '/usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:37:53',
+119 error      'Object.oncomplete (fs.js:297:15)' ] }
+120 error Please try running this command again as root/Administrator.
+121 error System Darwin 13.1.0
+122 error command "node" "/usr/local/bin/npm" "install" "-g" "express-generator"
+123 error cwd /Users/xuchuzhang/yourchallenger
+124 error node -v v0.8.18
+125 error npm -v 1.2.2
+126 error path /usr/local/lib/node_modules/express-generator
+127 error fstream_path /usr/local/lib/node_modules/express-generator
+128 error fstream_type Directory
+129 error fstream_class DirWriter
+130 error code EACCES
+131 error errno 3
+132 error stack Error: EACCES, mkdir '/usr/local/lib/node_modules/express-generator'
+133 error fstream_stack DirWriter._create (/usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23)
+133 error fstream_stack /usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:37:53
+133 error fstream_stack Object.oncomplete (fs.js:297:15)
+134 verbose exit [ 3, true ]

@@ -10,29 +10,30 @@
         </div>
         <div class="setting-content">
           <%= form_tag({ controller: "accounts", action: "update_account"}, class: "form-horizontal", role: "form", method: "post") do %>
+            <%= render partial: "flash_msg" %>
             <div class="form-group">
-              <label class="col-sm-2 control-label">Name</label>
-              <div class="col-xs-5">
-                <input type="text" class="form-control" id="inputRealname" name="user[name]" placeholder="First Name  Last Name" value="<%= current_user.name %>">
+              <label class="col-sm-3 control-label">Name</label>
+              <div class="col-xs-6">
+                <input class="form-control" name="name" placeholder="Name" type="text" value="<%= current_user.name %>">
               </div>
             </div>
             <div class="form-group">
-              <label class="col-sm-2 control-label">Username</label>
-              <div class="col-xs-5">
-                <input type="text" class="form-control" id="inputUsername" name="user[username]" placeholder="Username" value="<%= current_user.username %>">
+              <label class="col-sm-3 control-label">Username</label>
+              <div class="col-xs-6">
+                <input class="form-control"  name="username" placeholder="Userame" type="text" value="<%= current_user.username %>">
                 <div class="form-info">
-                    <span class="info" id="username-path">https://yourchallenger.com/xuchuzhang</span>
+                    <span id="username-path">https://yourchallenger.com/xuchuzhang</span>
                 </div>
               </div>
             </div>
             <div class="form-group">
-              <label class="col-sm-2 control-label">Email</label>
-              <div class="col-xs-5">
-                <input type="email" class="form-control" id="inputEmail" name="user[email]" placeholder="Email" value="<%= current_user.email %>" >
+              <label class="col-sm-3 control-label">Email</label>
+              <div class="col-xs-6">
+                <input class="form-control"  name="email" placeholder="Email" type="email" value="<%= current_user.email %>">
               </div>
             </div>
             <div class="form-group">
-                <div class="col-sm-offset-2 col-sm-10">
+                <div class="col-sm-offset-3 col-sm-10">
                     <button type="submit" class="btn btn-primary">Save Changes</button>
                  </div>
             </div>
