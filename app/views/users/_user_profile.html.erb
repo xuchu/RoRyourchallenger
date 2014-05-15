@@ -1,0 +1,4 @@
+<div class="user-profile">
+  <%= image_tag(current_user.avatar.url(:thumb), class: "avatar") %>
+  <span class="realname"><%= current_user.name %></span>
+</div>

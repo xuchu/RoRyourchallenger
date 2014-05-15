@@ -1,4 +1,5 @@
 
+//yc is a global object
 var yc ={};
 
 $(document).on('ready page:load', function(){
@@ -7,8 +8,7 @@ $(document).on('ready page:load', function(){
      alert( "hello" );
      });
      */
-    if( $('body').data("js") === 'js-users')
-    {
+    if( $('body').data("js") === 'js-users'){
         yc.users.init();
     }
 

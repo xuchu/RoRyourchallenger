@@ -13,11 +13,13 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
-    unless @user.valid?
-      render :new
-    else
-      @user.save
-      redirect_to "/"
+    respond_to do |format|
+      if @user.save
+        Mailer.welcome_email(@user).deliver
+        format.html { redirect_to "/" }
+      else
+        format.html { redirect_to "/signup" }
+      end
     end
   end
 

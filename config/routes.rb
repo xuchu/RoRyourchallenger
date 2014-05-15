@@ -12,6 +12,7 @@ Yourchallenger::Application.routes.draw do
   resources :users, only: [:create, :update]
   resources :sessions, only: [:create, :destroy]
   get '/signup', to: 'users#new', as: :signup
+
   get '/signin', to: 'sessions#new', as: :login
 
   delete '/signout', to: 'sessions#destroy', as: :logout

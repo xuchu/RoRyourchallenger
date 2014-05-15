@@ -14,5 +14,6 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require jquery.mmenu.min
+//= require handlebars.runtime-v1.3.0
 //= require yc
 //= require_tree .

@@ -1,20 +1,6 @@
-<div class="fixed-top-bar">
-</div>
 <div class="container" id="users-index">
   <div class="row">
-    <div class="col-md-4 row-left">
-      <%= render partial: "settings/accounts/user_profile" %>
-      <div id="dashboard">
-        <ul>
-          <li><a href="/settings/account"><span class="glyphicon glyphicon-picture"></span></a></li>
-          <li><a href="/settings/account"><span class="glyphicon glyphicon-envelope"></span></a></li>
-          <li><a href="/settings/account"><span class="glyphicon glyphicon-cog"></span></a></li>
-          <li><a href="/signout" data-method="delete" rel="nofollow"><span class="glyphicon glyphicon-off"></span></a></li>
-        </ul>
-      </div>
-      <div class="dashboard">
-      </div>
-    </div>
+    <%= render partial: "left_sidebar" %>
     <div class="col-md-8 right-row">
       <div id="timeline">
         <div class="content-heading">
@@ -68,3 +54,4 @@
     </div>
     </div>
 </div>
+<%= render partial: "modal" %>

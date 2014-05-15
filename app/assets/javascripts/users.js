@@ -12,6 +12,18 @@ yc.users = {
         this.timeline.init();
     }
 };
+yc.users.index ={
+
+    init: function(){
+
+    },
+    getDataAction: function(){
+      $()
+    },
+    displayModalForNewPost: function(){
+
+    }
+};
 
 yc.users.timeline = {
     timelineEle: "#timeline",
